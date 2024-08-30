@@ -1,0 +1,50 @@
+.form {
+    background-color: #dedede;
+    padding: 20px;
+    width: 400px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 6px;
+    min-height: 50px;
+}
+
+.tasks {
+    background-color: #dedede;
+    padding: 20px;
+    width: 400px;
+    margin: 40px auto;
+    border-radius: 6px;
+    min-height: 50px;
+}
+.input, .add {
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+}
+.input {
+    border: solid 1px #acacac;
+}
+.add, .delete{
+    background-color: rgb(255, 62, 62);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+}
+.task:not(:last-child) {
+    margin-bottom: 15px;
+}
+.delete {
+    border-radius: 4px;
+}
