@@ -1,3 +1,4 @@
+
 .form {
     background-color: #dedede;
     padding: 20px;
@@ -7,7 +8,7 @@
     justify-content: space-around;
     align-items: center;
     border-radius: 6px;
-    min-height: 50px;
+    min-height: 40px;
 }
 
 .tasks {
@@ -16,17 +17,18 @@
     width: 400px;
     margin: 40px auto;
     border-radius: 6px;
-    min-height: 50px;
 }
-.input, .add {
+.input, .add, .delete-all {
     height: 30px;
     border-radius: 4px;
     outline: none;
 }
 .input {
     border: solid 1px #acacac;
+    flex-grow: 1;
+    margin-right: 5px;
 }
-.add, .delete{
+.add, .delete, .delete-all{
     background-color: rgb(255, 62, 62);
     color: white;
     border: none;
@@ -41,10 +43,40 @@
     background-color: white;
     padding: 15px;
     border-radius: 4px;
+    transition: 0.3s;
+}
+.task:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
 }
 .task:not(:last-child) {
     margin-bottom: 15px;
 }
 .delete {
     border-radius: 4px;
+}
+
+.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+    position: relative;
+}
+
+.done:after {
+    content: "Completed";
+    position: absolute;
+    display: block;
+    color: green;
+    font-size: 25px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 10;
+}
+
+.delete-all {
+    display: block;
+    margin: auto;
+    margin-top: -25px;
 }
